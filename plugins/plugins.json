@@ -14,8 +14,22 @@
         "force_deactivation": true
     },
     {
-        "name": "Akismet",
-        "slug": "akismet",
+        "name": "Wordpress SEO",
+        "slug": "wordpress-seo",
+        "required": true,
+        "force_activation": true,
+        "force_deactivation": true
+    },
+    {
+        "name": "Simple Lightbox",
+        "slug": "simple-lightbox",
+        "required": true,
+        "force_activation": true,
+        "force_deactivation": true
+    },
+    {
+        "name": "Intuitive CPO",
+        "slug": "intuitive-custom-post-order",
         "required": true,
         "force_activation": true,
         "force_deactivation": true

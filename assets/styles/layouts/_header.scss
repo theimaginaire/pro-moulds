@@ -1,0 +1,54 @@
+/*--------------
+# Top Bar
+---------------*/
+
+.top-bar {
+	width: 100%;
+	display: block;
+	padding: 30px;
+	background-color: $brand-primary;
+	@include MQ(S){
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+	}
+}
+
+/*--------------
+# Header/Nav Bar
+---------------*/
+.navbar {
+	background: none;
+	border: 0;
+}
+.navbar-right {
+	padding: 25px 0;
+	.dropdown-menu {
+		left: 0;
+		padding: 0;
+		right: auto;
+		box-shadow: none;
+		@include border-radius(0);
+		li > a {
+			padding: 15px;
+		}
+	}
+}
+.navbar-toggle {
+	margin-top: 20px;
+}
+@include MQ(S){
+	.navbar-collapse {
+		margin-top: 30px;
+		background-color: $lightgrey;
+		border: none;
+	}
+}
+
+.logo {
+	max-width: 300px;
+	height: auto;
+	@include MQ(S){
+		max-width: 200px;
+	}
+}

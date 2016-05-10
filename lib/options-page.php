@@ -160,6 +160,19 @@ class imaginaire_Admin {
 			'id'   => 'linked_in',
 			'type' => 'text',
 		) );
+		$cmb->add_field( array(
+		    'name'    => 'Logo',
+		    'desc'    => 'Upload an image or enter an URL.',
+		    'id'      => 'logo',
+		    'type'    => 'file',
+		    // Optional:
+		    'options' => array(
+		        'url' => false, // Hide the text input for the url
+		    ),
+		    'text'    => array(
+		        'add_upload_file_text' => 'Upload Logo' // Change upload button text. Default: "Add or Upload File"
+		    ),
+		) );
 	}
 	/**
 	 * Register settings notices for display

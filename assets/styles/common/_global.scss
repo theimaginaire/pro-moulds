@@ -20,4 +20,12 @@ body {
 	color: $text;
 	font-weight: 300;
 }
+@include MQ(S){
+	// This is to position elements in main under the bottom bar with CTAs
+	.main {
+		z-index: 0;
+	}	
+}
+
+
 
