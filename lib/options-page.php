@@ -117,6 +117,11 @@ class imaginaire_Admin {
 			'type' => 'text',
 		) );
 		$cmb->add_field( array(
+			'name' => __( 'Email Address', 'imaginaire' ),
+			'id'   => 'email',
+			'type' => 'text',
+		) );
+		$cmb->add_field( array(
 			'name' => __( 'Street Address', 'imaginaire' ),
 			'id'   => 'street',
 			'type' => 'text',

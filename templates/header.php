@@ -1,6 +1,14 @@
 <section class="top-bar">
-<div class="container-fluid">
-
+<div class="container">
+<ul>
+<li><span class="hidden-xs"><i class="fa fa-phone"></i> <?php echo imaginaire_get_option('telephone'); ?></span>
+<span class="visible-xs">
+<a href="Tel:<?php echo imaginaire_get_option('telephone'); ?>">
+<i class="fa fa-phone"></i> <?php echo imaginaire_get_option('telephone'); ?>
+</a>
+</span></li>
+<li class="hidden-xs"><i class="fa fa-envelope-o"></i> <?php echo imaginaire_get_option('email'); ?></li>
+</ul>
 </div>
 </section>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">

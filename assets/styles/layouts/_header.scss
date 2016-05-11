@@ -1,16 +1,43 @@
-/*--------------
-# Top Bar
----------------*/
-
 .top-bar {
 	width: 100%;
 	display: block;
-	padding: 30px;
+	padding: 10px;
 	background-color: $brand-primary;
+	color: #fff;
 	@include MQ(S){
 		position: fixed;
+		display: block;
 		bottom: 0;
 		z-index: 1;
+	}
+	a {
+		color: #fff !important;
+		text-decoration: none;
+	}
+	ul {
+		display: block;
+		float: right;
+		padding: 0;
+		list-style: none;
+		@include MQ(S){
+			float: none;
+			margin: 0 auto;
+		}
+		li {
+			display: inline;
+			@include MQ(S){
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 10px;
+			}
+			.fa {
+				margin-right: 10px;
+			}
+			&:not(:last-child){
+				margin-right: 15px;
+			}
+		}
 	}
 }
 
@@ -20,26 +47,61 @@
 .navbar {
 	background: none;
 	border: 0;
+	margin-bottom: 0;
+	.fa {
+		margin-left: 10px;
+	}
 }
 .navbar-right {
 	padding: 25px 0;
+	@include MQ(S){
+		padding: 0;
+	}
 	.dropdown-menu {
+		top: 75px;
 		left: 0;
 		padding: 0;
 		right: auto;
 		box-shadow: none;
+		border-top: 4px solid $brand-primary;
 		@include border-radius(0);
 		li > a {
-			padding: 15px;
+			padding: 25px;
+			@include MQ(S){
+				padding: 15px !important;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+@include MQ(S){
+	.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+		padding: 15px;
+		background-color: #fff;
+		&:not(:last-child){
+			border-bottom: 1px solid #f4f5f6;
+		}
+	}
+}
+.navbar-nav>li {
+	&:not(:last-child){
+		margin-right: 25px;
+		@include MQ(S){
+			margin-right: 0;
 		}
 	}
 }
 .navbar-toggle {
 	margin-top: 20px;
 }
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	background: none;
+	.fa {
+		color: $brand-primary;
+	}
+}
 @include MQ(S){
 	.navbar-collapse {
-		margin-top: 30px;
 		background-color: $lightgrey;
 		border: none;
 	}
@@ -49,6 +111,6 @@
 	max-width: 300px;
 	height: auto;
 	@include MQ(S){
-		max-width: 200px;
+		max-width: 175px;
 	}
 }

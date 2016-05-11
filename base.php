@@ -17,6 +17,11 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
+
+      // Build relevant conditional statements for sliders here
+      if(is_front_page()):
+        echo do_shortcode('[rev_slider alias="home"]');
+      endif;
     ?>
     <div class="wrap container" role="document">
       <div class="content row">
